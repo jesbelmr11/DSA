@@ -1,25 +1,16 @@
 class Solution(object):
     def plusOne(self, digits):
 
-        arr = []
+        arr=[]
+        numstr=""
+        for i in range(len(digits)):
+            a=str(digits[i])
+            numstr=numstr+a
+        
+        num=int(numstr)
+        ans=num+1
 
-        for j in range(len(digits) - 1, -1, -1):
-
-            num = digits[j]
-            num = num + 1
-
-            l = len(str(num))
-
-            if l == 1:
-                digits[j] = num
-                return digits
-
-            else:
-                digits[j] = 0
-
-        arr.append(1)
-
-        for i in digits:
-            arr.append(i)
-
+        for j in str(ans):
+            arr.append(int(j))
+        
         return arr
